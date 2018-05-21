@@ -1,7 +1,7 @@
 {
-  "name": "js-basics-flow-control",
+  "name": "js-intro-to-functions-lab",
   "version": "0.1.0",
-  "description": "JavaScript Control Flow Lab for Learn.co",
+  "description": "JavaScript Intro to Functions Lab",
   "main": "index.js",
   "scripts": {
     "postinstall": "gem install learn-co",
@@ -9,24 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/learn-co-curriculum/js-basics-flow-control.git"
+    "url": "git+ssh://git@github.com/learn-co-curriculum/js-intro-to-functions-lab.git"
   },
   "keywords": [
     "learn",
-    "flatiron school",
-    "javascript",
-    "control flow",
-    "if",
-    "else",
     "lab"
   ],
-  "author": "@jk",
+  "author": "@maxwellbenton",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/learn-co-curriculum/js-basics-flow-control/issues"
+    "url": "https://github.com/learn-co-curriculum/js-intro-to-functions-lab/issues"
   },
-  "homepage": "https://github.com/learn-co-curriculum/js-basics-flow-control#readme",
+  "homepage": "https://github.com/learn-co-curriculum/js-intro-to-functions-lab#readme",
   "devDependencies": {
-    "learn-browser": "^0.1.13"
+    "learn-browser": "^0.1.17"
   }
 }

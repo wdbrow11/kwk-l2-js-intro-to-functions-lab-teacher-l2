@@ -1,41 +1,31 @@
 const expect = chai.expect;
 
 describe('index.js', function () {
-  describe('scuberGreetingForFeet()', function () {
-    it('gives customers a free sample if the ride is less than or equal to 400 feet', function () {
-      expect(scuberGreetingForFeet(199)).to.equal('This one is on me!');
-    });
-
-    it('charges 30 dollars for a distance over 2000 feet', function () {
-      expect(scuberGreetingForFeet(2001)).to.equal('I will gladly take your thirty bucks.');
-    });
-
-    it('does not allow rides over 2500 feet', function () {
-      expect(scuberGreetingForFeet(2501)).to.equal('No can do.');
+  describe('getUKTime()', function () {
+    it('returns a number representing the hour of the day in the UK', function () {
+      const currentHour = new Date().getHours()
+      expect(getUKTime()).to.be.a('number')
+      expect(getUKTime()).to.be.at.least(currentHour + 5)
+      expect(getUKTime()).to.be.at.most(currentHour + 8)
     });
   });
 
-  describe('ternaryCheckCity()', function () {
-    it('returns "Ok, sounds good." when the city is NYC', function () {
-      expect(ternaryCheckCity('NYC')).to.equal('Ok, sounds good.');
-    });
 
-    it('should return "No go." if the destination city is not NYC', function () {
-      expect(ternaryCheckCity('Pittsburgh')).to.equal('No go.');
+  describe('discountTicket()', function () {
+    it('returns a value that is 80% of the original argument value', function () {
+      expect(discountTicket(100)).to.be.a('number')
+      expect(discountTicket(100)).to.equal(80)
+      expect(discountTicket(160)).to.equal(128)
+      expect(discountTicket(122130)).to.equal(97704)
     });
   });
 
-  describe('switchOnCharmFromTip()', function () {
-    it('should return "Thank you so much." if the tip is generous', function () {
-      expect(switchOnCharmFromTip('generous')).to.equal('Thank you so much.');
-    });
-
-    it('should return "Thank you." if the tip is not as generous', function () {
-      expect(switchOnCharmFromTip('not as generous')).to.equal('Thank you.');
-    });
-
-    it('should return "Bye." if anything else', function () {
-      expect(switchOnCharmFromTip('thanks for everything')).to.equal('Bye.');
+  describe('tweetReply()', function () {
+    it('returns a string phrase that includes a the passed in argument', function () {
+      expect(tweetReply("Bruno Mars")).to.be.a('string')
+      expect(tweetReply("Bruno Mars")).to.equal("Hey Bruno Mars, thanks so much for the support! I really appreciate it!")
+      expect(tweetReply("Drake")).to.equal("Hey Drake, thanks so much for the support! I really appreciate it!")
+      expect(tweetReply("Isaac Netwon")).to.equal("Hey Isaac Netwon, thanks so much for the support! I really appreciate it!")
     });
   });
 });
